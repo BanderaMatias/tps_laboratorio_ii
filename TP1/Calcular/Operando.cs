@@ -16,6 +16,14 @@ namespace Entidades
                 this.numero = ValidarOperando(value);
                 }
         }
+        /// <summary>
+        /// Convierte de binario a decimal en caso de ser posible
+        /// </summary>
+        /// <param name="binario">Valor a convertir</param>
+        /// <returns>
+        /// 1)Si puede ser convertido. Decimal convertido 
+        /// 2)No puede ser convertido. "Valor invalido"
+        /// </returns>
         public static string BinarioDecimal(string binario)
         {
             string retorno = "";
@@ -30,6 +38,13 @@ namespace Entidades
 
             return retorno;
         }
+        /// <summary>
+        /// Convierte de decimal a binario 
+        /// </summary>
+        /// <param name="numero">Valor a convertir</param>
+        /// <returns>
+        /// Binario convertido 
+        /// </returns>
         public static string DecimalBinario(double numero)
         {
             int resto;
@@ -42,6 +57,14 @@ namespace Entidades
             }
             return binario;
         }
+
+        /// <summary>
+        /// Convierte de decimal a binario 
+        /// </summary>
+        /// <param name="numero">Valor a convertir</param>
+        /// <returns>
+        /// Binario convertido 
+        /// </returns>
         public static string DecimalBinario(string numero)
         {
             double auxNumero;
@@ -55,6 +78,14 @@ namespace Entidades
             }
 
         }
+        /// <summary>
+        /// Comprueba si el string pasado como parametro es un binario
+        /// </summary>
+        /// <param name="binario">string a comprobar</param>
+        /// <returns>
+        /// true: si es binario
+        /// false: si no es binario
+        /// </returns>
         public static bool EsBinario(string binario)
         {
             char [] arrayBinario = binario.ToCharArray();
@@ -80,6 +111,14 @@ namespace Entidades
         {
             Numero = strNumero;
         }
+        /// <summary>
+        /// Comprueba si el string pasado como parametro se puede convertir a double
+        /// </summary>
+        /// <param name="strNumero">string a comprobar</param>
+        /// <returns>
+        /// 1)Valor convertio
+        /// 2)0 En caso de no poder convertir el string
+        /// </returns>
         private double ValidarOperando(string strNumero)
         {
             double retorno=0;
